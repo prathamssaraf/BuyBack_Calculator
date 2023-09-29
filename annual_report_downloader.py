@@ -11,7 +11,7 @@ def process_annual_report(company_symbol, financial_year, phrases_to_search):
     try:
         # Your code to download the annual report
         # URL template with a placeholder for company_symbol
-        url_template = "https://www.screener.in/company/{}/consolidated/"
+        url_template = "https://www.screener.in/company/{}/consolidated/"    
 
         # Format the URL with the entered company symbol
         url = url_template.format(company_symbol)
@@ -91,7 +91,7 @@ def process_annual_report(company_symbol, financial_year, phrases_to_search):
         
         pdf_file = f"{company_symbol}_Annual_Report_{financial_year}.pdf"
         page_number = pages_with_phrase[0]  # Replace with the desired page number (1-indexed)
-        start_word = "Distribution"
+        start_word = "Distribution" #change it back to Distribution
         target_occurrence = 2  # Specify which occurrence of "100.00" you want
         adjustment = 10  # Adjust the value to increase the endpoints
         desired_dpi = 300  # Adjust the desired DPI for higher image quality
